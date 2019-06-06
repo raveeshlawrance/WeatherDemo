@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context=".WeatherActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/imgViewLocation"
+        android:src="@drawable/ic_location"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewCurrentLocation"
+        style="@style/txtViewLocation"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imgViewLocation"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/txtViewCurrentDate"
+        android:id="@+id/txtViewCurrentDate"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtViewCurrentLocation"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/layoutTemperature"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtViewCurrentDate">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewCurrentTemperature"
+        style="@style/txtViewTemperature"
+        android:text="\u00B0"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewCurrentTemperatureUnit"
+        style="@style/txtViewTemperatureUnit"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/txtViewCurrentTemperature"
+        android:text="C"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txtViewCurrentTemperatureUnit"
+            android:id="@+id/txtViewCurrentTemperatureFahrenheit"
+            style="@style/txtViewTemperature"
+            android:text="\u00B0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtViewCurrentTemperatureUnitFahrenheit"
+            style="@style/txtViewTemperatureUnit"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/txtViewCurrentTemperatureFahrenheit"
+            android:text="F"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/txtViewCurrentDate"
+        android:id="@+id/txtViewWindSpeed"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layoutTemperature"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_cloud"
+        android:layout_below="@+id/txtViewWindSpeed"
+        android:id="@+id/imgViewCloudiness"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStdDeviation"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray_opacity"
+        android:textColor="@color/white"
+        android:layout_below="@+id/imgViewCloudiness"
+        android:layout_centerHorizontal="true"
+        android:text="Standard Deviation"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewStdDeviation"
+        style="@style/txtViewLocation"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnStdDeviation"/>
+</RelativeLayout>

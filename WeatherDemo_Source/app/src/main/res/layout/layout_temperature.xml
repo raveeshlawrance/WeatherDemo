@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:layout_centerHorizontal="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewCurrentTemperature"
+        style="@style/txtViewTemperature"
+        android:text="\u00B0"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewCurrentTemperatureUnit"
+        style="@style/txtViewTemperatureUnit"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/txtViewCurrentTemperature"
+        android:text="C"/>
+</RelativeLayout>
